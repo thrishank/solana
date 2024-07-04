@@ -3,7 +3,7 @@ import { Connection, LAMPORTS_PER_SOL, clusterApiUrl } from "@solana/web3.js";
 import "dotenv/config";
 
 const KeyPair = getKeypairFromEnvironment("SECRET_KEY");
-const connect = new Connection(clusterApiUrl("devnet"));
+const connect = new Connection("http://127.0.0.1:8899");
 
 const transaction_hash = await connect.requestAirdrop(KeyPair.publicKey, 2 * LAMPORTS_PER_SOL);
 
