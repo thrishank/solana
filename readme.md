@@ -9,7 +9,7 @@ cd solana
 
 npm install
 
-touch .env
+cp .env.example .env
 
 // Place your secret Key in SECRET_KEY = "[]"
 
