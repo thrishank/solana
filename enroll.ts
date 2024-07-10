@@ -16,7 +16,8 @@ const program: Program<WbaPrereq> = new Program(IDL, provider)
 const enrollment_seeds = [Buffer.from("prereq"), keyPair.publicKey.toBuffer()];
 const [enrollment_key, _bump] = PublicKey.findProgramAddressSync(enrollment_seeds, program.programId);
 
-const hash = await program.methods.complete(github).accounts({ signer: keyPair.publicKey }).signers([keyPair]).rpc()
-
-console.log(`Check out your TX here:
-    https://explorer.solana.com/tx/${hash}?cluster=devnet`);
+(async () => {
+    const hash = await program.methods.complete(github).accounts({ signer: keyPair.publicKey }).signers([keyPair]).rpc()
+    console.log(`Check out your TX here:
+        https://explorer.solana.com/tx/${hash}?cluster=devnet`);
+})()

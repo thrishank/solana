@@ -13,7 +13,7 @@ cp .env.example .env
 
 // Place your secret Key in SECRET_KEY = "[]"
 
-npx esrun enroll.ts // example to run the code I don't use ts-node
+npx ts-node enroll.ts // example to run the code I don't use ts-node
 
 ```
 

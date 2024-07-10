@@ -1,9 +1,9 @@
 import { getExplorerLink, getKeypairFromEnvironment } from "@solana-developers/helpers";
 import { createMint } from "@solana/spl-token";
-import { Connection } from "@solana/web3.js";
+import { clusterApiUrl, Connection } from "@solana/web3.js";
 import "dotenv/config";
 
-const connect = new Connection("http://127.0.0.1:8899");
+const connect = new Connection(clusterApiUrl("devnet"));
 
 async function main() {
     console.log("Getting keypair from environment...");
