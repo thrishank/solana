@@ -9,12 +9,11 @@ const connect = new Connection("https://api.devnet.solana.com", "confirmed");
 
 const transaction = new Transaction();
 
-const LAMPORTS_TO_SEND = 100000000;
-
+// instructions
 const sendSolInstruction = SystemProgram.transfer({
     fromPubkey: sendKeyPair.publicKey,
     toPubkey,
-    lamports: LAMPORTS_TO_SEND
+    lamports: 100000000
 })
 
 transaction.add(sendSolInstruction);

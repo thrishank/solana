@@ -6,7 +6,6 @@ const keyPair = getKeypairFromEnvironment("SECRET_KEY");
 
 const connect = new Connection('https://api.devnet.solana.com', 'confirmed');
 const address = new PublicKey(keyPair.publicKey);
-// const address = new PublicKey("BD6BUUzunY1ToNmZeHZ9vBkgFqaSY336bzcCKaA2sUFM")
 
 (async () => {
     const balance = await connect.getBalance(address) / LAMPORTS_PER_SOL;
