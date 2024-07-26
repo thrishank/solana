@@ -1,5 +1,6 @@
 mod programs;
 
+// convert functions
 // fn wallet_to_base58() {
 //     println!("Input your private key as a wallet file byte array ");
 //     let stdin = io::stdin();
@@ -32,7 +33,7 @@ mod programs;
 mod tests {
     use std::str::FromStr;
 
-    use crate::programs::wba_prereq::{CompleteArgs, UpdateArgs, WbaPrereqProgram};
+    use crate::programs::wba_prereq::{CompleteArgs, WbaPrereqProgram};
     use solana_client::rpc_client::RpcClient;
     use solana_sdk::{
         self,
