@@ -1,2 +1,5 @@
-.env
+*wallet.json
 node_modules
+target
+.DS_Store
+.env
