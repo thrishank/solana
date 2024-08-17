@@ -8,15 +8,12 @@ pub struct InitVault<'info> {
     #[account(
         init,
         payer = signer,
-        seeds=[b"state", signer.key().as_ref()],
+        seeds = [b"state", signer.key().as_ref()],
         bump,
         space = VaultState::LEN
     )]
     pub state: Account<'info, VaultState>,
-    #[account(
-        seeds=[b"vault", state.key().as_ref()],
-        bump
-    )]
+    #[account(seeds = [b"vault", state.key().as_ref()], bump)]
     pub vault: SystemAccount<'info>,
     pub system_program: Program<'info, System>,
 }
